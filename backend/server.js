@@ -1,7 +1,7 @@
 
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 const fs = require("fs");
 const path = require("path");
 const db = require("./config/mongoose");
@@ -24,6 +24,7 @@ app.use( express.static("assets"));
 app.use("/", routes); 
 
 // server listener 
+
 app.listen(port, () => {
   console.log(`Todo app listening on port ${port}`)
 })
