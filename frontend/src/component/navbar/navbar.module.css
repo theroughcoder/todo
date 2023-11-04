@@ -1,0 +1,32 @@
+/* ////////////////////////////////////////////////////////////////////// */
+/*  header started form here  */
+header{
+    height: 50px;
+    background: linear-gradient( 10deg, #5bdaf3, #ebf8e1, #1af3d6);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px grey;
+}
+
+/* logo of the website */
+.logo{
+    font-size: 2.5rem;
+    margin-left: 5%;
+    color: white;
+    font-family:monospace;
+}
+/* css for header links  */
+.headerLinks{
+    font-size: 5px;
+    margin-right: 5%;
+    color: aliceblue;
+    transform: translateY(10px);
+}
+.headerLinks a{
+    font-size: 1rem;
+    padding: 20px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* header is completed here  */

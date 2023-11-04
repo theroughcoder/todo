@@ -1,0 +1,22 @@
+
+.todoHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.todoWrapBtn {
+    width: 200px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 5px;
+    /* margin-top: 2rem; */
+    border: 0px solid rgb(153, 151, 151);
+}
+.blueBtn{
+    background: linear-gradient( 170deg, #def4f8, #8af7ef8e, #1fffe1dd);
+    color: rgb(84, 82, 82);
+  }
