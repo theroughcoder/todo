@@ -16,7 +16,7 @@ export  const Navbar = () => {
                 <div className={Style.logo}> ToDo</div>
                 {/* <!-- right section in header for holding header links */}
                 
-                    <h3  onClick={()=> {
+                    <h3 style={{marginRight : "50px" }} onClick={()=> {
                         dispatch({type : LOG_OUT_USER}) 
                         navigate('/signin')
                     }
