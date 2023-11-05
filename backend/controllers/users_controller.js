@@ -2,13 +2,7 @@ const User = require("../models/users_schema");
 
 
 
-module.exports.makeAdmin = async function(req, res) {
-    const {id} = req.body;
 
-    const user = await User.findByIdAndUpdate(id, {admin : true});
-
-    res.redirect('back');
-}
 
 // for creating users
 module.exports.createUser = async function(req, res) {
@@ -24,14 +18,14 @@ module.exports.createUser = async function(req, res) {
         } = req.body;
         if(password != confirm_password){
             
-            res.status(500).json({message: "Password and confirm password doesn't match", status: "fail"})
+            res.status(400).json({message: "Password and confirm password doesn't match", status: "fail"})
             return;
         }
         // console.log("hii");
         
         const check = await User.findOne({ username });
         if (check) {
-            res.status(500).json({message: "User Already exist" , status: "fail"})
+            res.status(400).json({message: "User Already exist" , status: "fail"})
             return;
         }
         
@@ -61,7 +55,7 @@ module.exports.login = async function(req, res) {
         const check = await User.findOne({ username });
         if (!check || check.password != password) {
             
-            res.status(500).json({ message: "Incorrect credentials" });
+            res.status(400).json({ message: "Incorrect credentials" });
             return;
         }
         
