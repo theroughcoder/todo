@@ -35,11 +35,15 @@
   margin: auto;
 }
 .todoLeft{
-
+width: 80%;
 display: flex;  /* background-color: rgba(136, 138, 137, 0.116); */
 }
 .todoRight{
   display: flex;
+  width: 20%;
+}
+.todoRight button{
+  height: 40px;
 }
 
 .task{
@@ -55,6 +59,7 @@ display: flex;  /* background-color: rgba(136, 138, 137, 0.116); */
   margin: 5px;
   text-align: left;
   padding-left: 2ch;
+  width: 80%;
 }
 .date{
   color:rgb(84, 82, 82);
@@ -68,7 +73,7 @@ display: flex;  /* background-color: rgba(136, 138, 137, 0.116); */
   min-height: 100px;
   background-color: rgba(158, 175, 163, 0.397);
   padding: 5px;
-  width: 80px;
+  width: 20%;
   text-align: center;
   line-height: 100px;
 }
@@ -139,4 +144,19 @@ display: flex;  /* background-color: rgba(136, 138, 137, 0.116); */
 .blueBtn{
     background: linear-gradient( 10deg, #5bdaf37e, #adfaf68e, #1af3d679);
     color: rgb(84, 82, 82);
+  }
+
+
+  /* ************Media queries********* */
+  @media (max-width: 600px) {
+
+    
+      .todoRight{
+        display: block;
+      }
+      .todoRight button{
+        height: 30px;
+        width: 50px;
+      }
+
   }
